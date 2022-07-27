@@ -2,5 +2,8 @@
 {
     public class CreateAdvisorProjectDto
     {
+        public int AdvisorId { get; set; }
+        public int ProjectId { get; set; }
+        public string Status { get; set; }
     }
 }

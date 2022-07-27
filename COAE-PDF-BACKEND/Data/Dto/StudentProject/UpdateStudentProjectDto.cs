@@ -2,5 +2,8 @@
 {
     public class UpdateStudentProjectDto
     {
+        public int StudentId { get; set; }
+        public int ProjectId { get; set; }
+        public string Status { get; set; }
     }
 }

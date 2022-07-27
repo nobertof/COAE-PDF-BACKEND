@@ -2,5 +2,8 @@
 {
     public class UpdateStudentDto
     {
+
+        public int AcessoId { get; set; }
+        public string Matricula { get; set; }
     }
 }

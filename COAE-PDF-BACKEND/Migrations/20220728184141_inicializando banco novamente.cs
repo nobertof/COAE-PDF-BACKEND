@@ -4,7 +4,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 namespace COAE_PDF_BACKEND.Migrations
 {
-    public partial class Inicializandobanco : Migration
+    public partial class inicializandobanconovamente : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,6 +15,8 @@ namespace COAE_PDF_BACKEND.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     AcessoId = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: true),
+                    Email = table.Column<string>(type: "text", nullable: true),
                     Matricula = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
@@ -42,6 +44,8 @@ namespace COAE_PDF_BACKEND.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "text", nullable: true),
+                    Email = table.Column<string>(type: "text", nullable: true),
                     AcessoId = table.Column<int>(type: "int", nullable: false),
                     Matricula = table.Column<string>(type: "text", nullable: true)
                 },
@@ -126,7 +130,7 @@ namespace COAE_PDF_BACKEND.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Frequency",
+                name: "Frequencies",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -137,9 +141,9 @@ namespace COAE_PDF_BACKEND.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Frequency", x => x.Id);
+                    table.PrimaryKey("PK_Frequencies", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Frequency_FrequencySheets_FrequencySheetId",
+                        name: "FK_Frequencies_FrequencySheets_FrequencySheetId",
                         column: x => x.FrequencySheetId,
                         principalTable: "FrequencySheets",
                         principalColumn: "Id",
@@ -157,8 +161,8 @@ namespace COAE_PDF_BACKEND.Migrations
                 column: "ProjectId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Frequency_FrequencySheetId",
-                table: "Frequency",
+                name: "IX_Frequencies_FrequencySheetId",
+                table: "Frequencies",
                 column: "FrequencySheetId");
 
             migrationBuilder.CreateIndex(
@@ -183,7 +187,7 @@ namespace COAE_PDF_BACKEND.Migrations
                 name: "AdvisorProjects");
 
             migrationBuilder.DropTable(
-                name: "Frequency");
+                name: "Frequencies");
 
             migrationBuilder.DropTable(
                 name: "StudentProjects");

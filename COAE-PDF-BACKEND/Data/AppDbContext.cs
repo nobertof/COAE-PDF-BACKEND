@@ -47,7 +47,7 @@ namespace COAE_PDF_BACKEND.Data
         public DbSet<Student> Students { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<FrequencySheet> FrequencySheets{ get; set; }
-        public DbSet<Frequency> Frequency { get; set; }
+        public DbSet<Frequency> Frequencies { get; set; }
         public DbSet<AdvisorProject> AdvisorProjects { get; set; }
         public DbSet<StudentProject> StudentProjects { get; set; }
     }

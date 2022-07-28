@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace COAE_PDF_BACKEND.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220727183157_Inicializando banco")]
-    partial class Inicializandobanco
+    [Migration("20220728184141_inicializando banco novamente")]
+    partial class inicializandobanconovamente
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,7 +28,13 @@ namespace COAE_PDF_BACKEND.Migrations
                     b.Property<int>("AcessoId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
                     b.Property<string>("Matricula")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -79,7 +85,7 @@ namespace COAE_PDF_BACKEND.Migrations
 
                     b.HasIndex("FrequencySheetId");
 
-                    b.ToTable("Frequency");
+                    b.ToTable("Frequencies");
                 });
 
             modelBuilder.Entity("COAE_PDF_BACKEND.Models.FrequencySheet", b =>
@@ -130,7 +136,13 @@ namespace COAE_PDF_BACKEND.Migrations
                     b.Property<int>("AcessoId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
                     b.Property<string>("Matricula")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
                         .HasColumnType("text");
 
                     b.HasKey("Id");

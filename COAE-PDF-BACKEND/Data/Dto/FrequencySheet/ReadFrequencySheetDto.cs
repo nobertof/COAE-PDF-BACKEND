@@ -18,6 +18,6 @@ namespace COAE_PDF_BACKEND.Data.Dto
         public int ProjectId { get; set; }
         public virtual Project Project { get; set; }
 
-        public object Frequencies { get; set; }
+        public virtual List<Frequency> Frequencies { get; set; }
     }
 }

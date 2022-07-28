@@ -14,12 +14,13 @@ namespace COAE_PDF_BACKEND.Models
         public int Year { get; set; }
         [Required(ErrorMessage = "O campo mês é obrigatorio")]
         public int Month { get; set; }
-
+        
         public int ProjectId { get; set; }
         [JsonIgnore]
         public virtual Project Project { get; set; }
         [JsonIgnore]
-
         public virtual List<Frequency> Frequencies { get; set; }
+
+
     }
 }

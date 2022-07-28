@@ -1,17 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace COAE_PDF_BACKEND.Data.Dto
+namespace COAE_CADASTRO.Models
 {
-    public class ReadStudentDto
+    public class Usuario
     {
         [Key]
         [Required]
         public int Id { get; set; }
+        public string Username { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public int AcessoId { get; set; }
-        public string Matricula { get; set; }
-
-        public object Projects { get; set; }
     }
 }

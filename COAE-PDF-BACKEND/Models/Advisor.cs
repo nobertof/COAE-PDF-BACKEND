@@ -10,6 +10,8 @@ namespace COAE_PDF_BACKEND.Models
         [Required]
         public int Id { get; set; }
         public int AcessoId { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
         public string Matricula { get; set; }
         [JsonIgnore]
         public virtual List<AdvisorProject> Projects { get; set; }

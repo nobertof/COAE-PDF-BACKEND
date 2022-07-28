@@ -22,7 +22,7 @@ namespace COAE_PDF_BACKEND.Services
 
         public List<ReadProjectDto> PegarProjetos()
         {
-            return _mapper.Map<List<ReadProjectDto>>(_context.Projects);
+            return _mapper.Map<List<ReadProjectDto>>(_context.Projects.ToList());
         }
 
         public ReadProjectDto CadastrarProjeto(CreateProjectDto createDto)
